@@ -5,7 +5,19 @@ public class Player : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision) //er gebeurt collision
     {
-        Debug.Log("hoi");
+   
+    }
+
+    void OnTriggerEnter(Collider trigger)
+    {
+            
+        Debug.Log("Collision with" + trigger.gameObject.name);
+            
+
+        if (trigger.gameObject.name == "NPC" && Input.GetButton("Jump"))
+        {
+            Debug.Log("Hello mister!");
+        }
     }
 
     public float Movementspeed = 1; //de snelheid waarmee het object beweegt
@@ -47,6 +59,8 @@ public class Player : MonoBehaviour
             transform.Translate(Vector3.back * Movementspeed);
             m_WalkTimer = m_WalkDelay;
         }
+
     }
+        
 
 }
