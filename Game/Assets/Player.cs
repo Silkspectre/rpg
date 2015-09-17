@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     private Vector3 StartingPosition;
     private Vector3 TargetPosition;
 
+    private bool m_CollidingWithNPC = false;
+    private GameObject m_NPC = null;
+
     void OnCollisionEnter(Collision collision) //er gebeurt collision
     {
    
@@ -17,20 +20,38 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider trigger)
     {
-            
-        Debug.Log("Collision with" + trigger.gameObject.name);
+        Debug.Log("Triggered with" + trigger.gameObject.name);
+
+        //dit moet er nog voor zorgen dat je niet precies op het moment dat er collision is space hoeft te klikken
+
+        if (trigger.gameObject.name == "NPC")
+        {
+            Debug.Log("Hey, that NPC is colliding with us!");
+            m_CollidingWithNPC = true;
+            m_NPC = trigger.gameObject;
+        }
+
+
+       // {
+            //Debug.Log("Hello mister!");
+       // }
+        
             
 
-        if (trigger.gameObject.name == "NPC" && Input.GetButton("Jump"))
-        {
-            Debug.Log("Hello mister!");
-        }
+        
+        //if (trigger.gameObject.name == "NPC" && Input.GetButton("Jump"))
+
+       // {
+            //Debug.Log("Hello mister!");
+       // }
     }
+
+    public GameObject SpeechBubble;
 
     // Use this for initialization
     void Start()
     {
-        
+        SpeechBubble.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,6 +75,7 @@ public class Player : MonoBehaviour
             StartingPosition = transform.position;// De positie waar we nu staan (tijd 0%)
             TargetPosition = StartingPosition + (Vector3.left * Movementspeed);// De positie waar we over 0.1 sec staan (tijd 100%)
             m_WalkTimer = m_WalkDelay;
+            m_CollidingWithNPC = false;
         }
 
         if (Input.GetKey("right") && m_WalkTimer <= 0.0f)
@@ -61,6 +83,7 @@ public class Player : MonoBehaviour
             StartingPosition = transform.position;// De positie waar we nu staan (tijd 0%)
             TargetPosition = StartingPosition + (Vector3.right * Movementspeed);// De positie waar we over 0.1 sec staan (tijd 100%)
             m_WalkTimer = m_WalkDelay;
+            m_CollidingWithNPC = false;
         }
 
         if (Input.GetKey("up") && m_WalkTimer <= 0.0f)
@@ -68,6 +91,7 @@ public class Player : MonoBehaviour
             StartingPosition = transform.position;// De positie waar we nu staan (tijd 0%)
             TargetPosition = StartingPosition + (Vector3.forward * Movementspeed);// De positie waar we over 0.1 sec staan (tijd 100%)
             m_WalkTimer = m_WalkDelay;
+            m_CollidingWithNPC = false;
         }
 
         if (Input.GetKey("down") && m_WalkTimer <= 0.0f)
@@ -75,6 +99,7 @@ public class Player : MonoBehaviour
             StartingPosition = transform.position;// De positie waar we nu staan (tijd 0%)
             TargetPosition = StartingPosition + (Vector3.back * Movementspeed);// De positie waar we over 0.1 sec staan (tijd 100%)
             m_WalkTimer = m_WalkDelay;
+            m_CollidingWithNPC = false;
         }
 
         // Als de speler beweegt dan lerp tussen start en end position
@@ -87,7 +112,14 @@ public class Player : MonoBehaviour
             transform.position = Vector3.Lerp(StartingPosition, TargetPosition, tijd);
         }
 
+        if (m_CollidingWithNPC && Input.GetButtonUp("Jump"))
+        {
+            //m_CollidingWithNPC = false;
+            Debug.Log("Dialog!");
+            SpeechBubble.SetActive(true);
+        }
 
+        Debug.Log("Colliding: " + m_CollidingWithNPC);
 
         //Translate
     }
