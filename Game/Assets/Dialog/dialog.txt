@@ -1,14 +1,14 @@
 Daniel
-Hey there Liane! How's life these days?
+Hey there Caitlyn! How's life these days?
 .END
-Liane
+Caitlyn
 It's actually pretty good! I've been walking through the woods a lot.
 Did you know there's a small village across the lake?
 .END
 Daniel
 I did not. Do they have a bakery?
 .END
-Liane
+Caitlyn
 Not even salt can make your hands taste good.
 I'm still crunching your lifeline.
 .END
