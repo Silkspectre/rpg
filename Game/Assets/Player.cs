@@ -26,32 +26,29 @@ public class Player : MonoBehaviour
 
         if (trigger.gameObject.name == "NPC")
         {
-            Debug.Log("Hey, that NPC is colliding with us!");
+            //Debug.Log("Hey, that NPC is colliding with us!");
             m_CollidingWithNPC = true;
             m_NPC = trigger.gameObject;
         }
-
-
-       // {
-            //Debug.Log("Hello mister!");
-       // }
-        
-            
-
-        
-        //if (trigger.gameObject.name == "NPC" && Input.GetButton("Jump"))
-
-       // {
-            //Debug.Log("Hello mister!");
-       // }
     }
 
-    public GameObject SpeechBubble;
+    void OnTriggerExit(Collider trigger)
+    {
+        if (trigger.gameObject.name == "NPC")
+        {
+            //Debug.Log("We're no longer touching the NPC");
+            m_CollidingWithNPC = false;
+            m_NPC = trigger.gameObject;
+            m_NPC.GetComponent<Dialog>().EndConversation();
+        }
+    }
+
+    Speech Speech;
 
     // Use this for initialization
     void Start()
     {
-        SpeechBubble.SetActive(false);
+        Speech = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Speech>();
     }
 
     // Update is called once per frame
@@ -105,21 +102,18 @@ public class Player : MonoBehaviour
         // Als de speler beweegt dan lerp tussen start en end position
         if (PlayerWalking)
         {
-            // begin = WalkingDelay = 0.1f == tijd op 0
-            // end = 0 == tijd op 1
-            
-            float tijd = (m_WalkDelay - Mathf.Max(0.0f, m_WalkTimer)) * (1.0f/m_WalkDelay);
+            float tijd = (m_WalkDelay - Mathf.Max(0.0f, m_WalkTimer)); // ipv 0.1 tot 0.0 (walkdelay = 0.1) wordt het 0.0 tot 0.1
+            tijd = tijd * (1.0f/m_WalkDelay);                          // dan 1/0.1 = 10 en dat doe ik keer de tijd (0.0 tot 1.0)
+
             transform.position = Vector3.Lerp(StartingPosition, TargetPosition, tijd);
+            // Linear interpolation van 0.0 tot 1.0 (tijd)
+            // Kies een punt tussen StartinPosition en TargetPosition, gebaseerd op 'tijd'.
         }
 
         if (m_CollidingWithNPC && Input.GetButtonUp("Jump"))
         {
-            //m_CollidingWithNPC = false;
-            Debug.Log("Dialog!");
-            SpeechBubble.SetActive(true);
+            m_NPC.GetComponent<Dialog>().Speak();
         }
-
-        Debug.Log("Colliding: " + m_CollidingWithNPC);
 
         //Translate
     }
