@@ -47,7 +47,7 @@ public class Speech : MonoBehaviour
         }
         else Debug.LogWarning("Cannot find Character in global scope for '" + a_Dialog.Name + "'.");
 
-        m_Text.GetComponent<Text>().text = a_Dialog.Line;
+        m_Text.GetComponent<Text>().text = "<B>" + a_Dialog.Name + ":</B> " + a_Dialog.Line;
 
         transform.localScale = t_Scale;
         m_Text.transform.localScale = t_ScaleText;
