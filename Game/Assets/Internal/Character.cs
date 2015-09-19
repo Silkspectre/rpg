@@ -13,6 +13,6 @@ public enum Gender
 public class Character
 {
     public string Name;
-    public Texture Image;
+    public Sprite Image;
     public Gender Gender;
 }

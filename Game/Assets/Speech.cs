@@ -38,10 +38,14 @@ public class Speech : MonoBehaviour
                 t_TextRect.offsetMin = new Vector2(20, t_TextRect.offsetMin.y);
             }
         }
-        else if (m_Text.transform.localScale.x < 0)
+
+
+        Character t_Character = Global.Singleton.GetCharacter(a_Dialog.Name);
+        if (t_Character != null)
         {
-            //t_TextRect.offsetMin = new Vector2(-20, t_TextRect.offsetMin.y);
+            m_Speaker.GetComponent<Image>().sprite = t_Character.Image;
         }
+        else Debug.LogWarning("Cannot find Character in global scope for '" + a_Dialog.Name + "'.");
 
         m_Text.GetComponent<Text>().text = a_Dialog.Line;
 
