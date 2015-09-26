@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: dad878f497f705c4d9aeb4a721d82fdb
+timeCreated: 1443256046
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: caitlyn-sheet_0
+    21300002: caitlyn-sheet_1
+    21300004: caitlyn-sheet_3
+    21300006: caitlyn-sheet_6
+    21300008: caitlyn-sheet_9
+    21300010: caitlyn-sheet_16
+    21300012: caitlyn-sheet_18
+    21300014: caitlyn-sheet_27
+    21300016: caitlyn-sheet_28
+    21300018: caitlyn-sheet_33
+    21300020: caitlyn-sheet_35
+    21300022: caitlyn-sheet_36
+    21300024: caitlyn-sheet_37
+    21300026: caitlyn-sheet_38
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: caitlyn-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 550
+        width: 188
+        height: 355
+      alignment: 9
+      pivot: {x: .517192423, y: .55766207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 897
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 635
+        width: 188
+        height: 247
+      alignment: 9
+      pivot: {x: .431231409, y: .055092752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 583
+        width: 106
+        height: 156
+      alignment: 9
+      pivot: {x: .449180186, y: .872936547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 459
+        width: 161
+        height: 138
+      alignment: 9
+      pivot: {x: .47992456, y: .460964471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 409
+        width: 110
+        height: 154
+      alignment: 9
+      pivot: {x: .725269139, y: .863788188}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 423
+        width: 81
+        height: 121
+      alignment: 9
+      pivot: {x: .845823288, y: .891771555}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 170
+        width: 145
+        height: 253
+      alignment: 9
+      pivot: {x: .656033039, y: .964164615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 234
+        width: 61
+        height: 190
+      alignment: 9
+      pivot: {x: .464675665, y: .959300935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 167
+        width: 92
+        height: 224
+      alignment: 9
+      pivot: {x: .546841145, y: .966540873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 7
+        width: 83
+        height: 162
+      alignment: 9
+      pivot: {x: .655764461, y: .885726094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 89
+        width: 96
+        height: 73
+      alignment: 9
+      pivot: {x: .713230133, y: .795170605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 64
+        width: 63
+        height: 186
+      alignment: 9
+      pivot: {x: .48289755, y: .951801479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: caitlyn-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 23
+        width: 94
+        height: 75
+      alignment: 9
+      pivot: {x: .74068892, y: .873488784}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
