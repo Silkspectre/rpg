@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+    public Statholder m_Stats;
+
     public float Movementspeed = 1; //de snelheid waarmee het object beweegt
     public float m_WalkDelay = 0.1f;
 
@@ -36,7 +38,6 @@ public class Player : MonoBehaviour
 
     void OnCollisionExit()
     {
-
     }
 
     bool CanWalkInDirection(Vector3 a_Direction)
