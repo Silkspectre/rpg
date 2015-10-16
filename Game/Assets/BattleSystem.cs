@@ -25,7 +25,7 @@ public class BattleSystem : MonoBehaviour {
 	void Update ()
     {
         Debug.Log(CurrentState);
-	    switch (CurrentState)
+	    switch (CurrentState) //kiest tussen de volgende case
         {
             case (BattleStates.START):
                 //alles wat er bij START gebeurt
@@ -50,7 +50,7 @@ public class BattleSystem : MonoBehaviour {
         }
 	}
 
-    void onGUI() //werkt nog niet
+    void OnGUI() //werkt
     {
         if (GUILayout.Button("Next state"))
         {
@@ -58,6 +58,23 @@ public class BattleSystem : MonoBehaviour {
             {
                 CurrentState = BattleStates.PLAYERCHOICE;
             }
+            else if (CurrentState == BattleStates.PLAYERCHOICE)
+            {
+                CurrentState = BattleStates.ENEMYCHOICE;
+            }
+            else if (CurrentState == BattleStates.ENEMYCHOICE)
+            {
+                CurrentState = BattleStates.LOSE;
+            }
+            else if (CurrentState == BattleStates.LOSE)
+            {
+                CurrentState = BattleStates.WIN;
+            }
+            else if (CurrentState == BattleStates.WIN)
+            {
+                CurrentState = BattleStates.START;
+            }
+
         }
     }
 
