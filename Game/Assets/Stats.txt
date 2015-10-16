@@ -1,0 +1,50 @@
+Stats:
+
+Player LVL 1 (ROGUE/WARRIOR)
+HP 20 + 5
+MP 10 + 2
+SPD 7 + 1
+STR 10 + 2
+INT 9 + 1
+
+Caitlyn (MAGE)
+HP 15 + 3
+MP 15 + 3
+SPD 8 + 1
+STR 4 + 1
+INT 12 + 2
+
+Diago (ROGUE)
+HP 22 + 5
+MP 7 + 2
+SPD 10 + 2
+STR 8 + 1
+INT 10 + 1
+
+Alexandra (PALADIN)
+HP 25 + 5
+MP 10 + 2
+SPD 5 + 1
+STR 12 + 2
+INT 5 + 1
+
+Aden (WITCH DOCTOR)
+HP 15 + 2
+MP 15 + 3
+SPD 10 + 1
+STR 4 + 1
+INT 12 + 2
+
+Skjarnard (WARRIOR)
+HP 25 + 5
+MP 10 + 2
+SPD 7 + 1
+STR 12 + 2
+INT 6 + 1
+
+Skjarnard (KNIGHT)
+HP 25 + 5
+MP 10 + 1
+SPD 6 + 1
+STR 12 + 2
+INT 8 + 1

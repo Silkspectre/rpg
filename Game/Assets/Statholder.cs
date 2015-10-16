@@ -4,6 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class Statholder
 {
+    public string m_playerName;
     public int m_Level;
     public int m_EXP;
 
@@ -12,8 +13,9 @@ public class Statholder
     public Stat m_SPD;
     public Stat m_STR;
     public Stat m_INT;
+}
 
-    public void LevelUp()
+    private void LevelUp()
     {
         m_HP.LevelUp();
         m_MP.LevelUp();
@@ -22,7 +24,7 @@ public class Statholder
         m_INT.LevelUp();
     }
 
-    public void EXPCheck()
+    private void EXPCheck()
     {
         if (m_EXP >= GetEXPRequirement())
         {

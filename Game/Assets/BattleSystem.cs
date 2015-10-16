@@ -3,6 +3,17 @@ using System.Collections;
 
 public class BattleSystem : MonoBehaviour {
 
+    public enum ClassType
+    {
+        Player,
+        Diago,
+        Caitlyn,
+        Alexandra,
+        Aden,
+        Skjarnard,
+        Bryce
+    }
+     
     public enum BattleStates
     {
         START,
