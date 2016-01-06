@@ -13,7 +13,7 @@ public class Statholder
     public Stat m_SPD;
     public Stat m_STR;
     public Stat m_INT;
-}
+
 
     private void LevelUp()
     {

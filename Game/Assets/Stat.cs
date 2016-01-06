@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
+//[System.Serializable]
 public class Stat
 {
     public float m_Base = 0.0f; // Base of state

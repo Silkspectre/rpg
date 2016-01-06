@@ -1,0 +1,10 @@
+- rood uitroepteken = tegen elkaar mortal kombat X
+- geel ster = 20 muntjes inleveren voor een ster X
+- blauw vraagteken = kanskaart X
+- groen poppetje = minigame X
+	- memory
+	- space invaders
+	- whack-a-mole
+	- slot machine
+	- tug-o'-war
+- normale tile zandkleurig = 3 muntjes X
