@@ -9,15 +9,14 @@ public class Player : NetworkBehaviour
     public float speedfalloff = 10.0F;
     public float MaxSpeed = 3.0F;
 
-
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 	
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void Update ()
+    {
         var HorizontalInput = Input.GetAxis("Horizontal");
         var VerticalInput = Input.GetAxis("Vertical");
 
