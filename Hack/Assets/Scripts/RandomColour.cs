@@ -4,6 +4,14 @@ using UnityEngine.Networking;
 
 public class RandomColour : NetworkBehaviour
 {
+    [SyncVar(hook = "SetColour")]
+    Color m_Colour;
+
+    void SetColour(Color a_Colour)
+    {
+        GetComponent<SpriteRenderer>().color = RandomPastel();
+    }
+
     Color RandomPastel()
     {
         Color t_Colour = Color.black;
@@ -24,10 +32,8 @@ public class RandomColour : NetworkBehaviour
 
 	void Start ()
     {
-	    if(isServer)
-        {
-            GetComponent<SpriteRenderer>().color = RandomPastel();
-        }
+        if(isServer)
+            m_Colour = RandomPastel();
 	}
 
 	void Update ()

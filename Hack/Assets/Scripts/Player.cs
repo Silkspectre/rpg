@@ -44,7 +44,7 @@ public class Player : NetworkBehaviour
         // We can jump if our velocity is close to 0.
         bool CanJump = Mathf.Abs(velocity.y) <= 0.03f;
         
-        bool InTheAir = !CanJump;
+        //bool InTheAir = !CanJump;
 
         var HorizontalInput = Input.GetAxis("Horizontal");
 

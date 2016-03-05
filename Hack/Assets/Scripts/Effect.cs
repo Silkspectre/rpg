@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Effect
 {
-    private Dictionary<string, float> m_Effects;
+    private Dictionary<string, float> m_Effects = new Dictionary<string, float>();
 
     public float this[string a_Iterator]
     {
