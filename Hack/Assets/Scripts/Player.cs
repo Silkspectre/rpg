@@ -4,20 +4,27 @@ using UnityEngine.Networking;
 
 public class Player : NetworkBehaviour
 {
-    Vector3 velocity = Vector3.zero;
+    public Vector3 velocity = Vector3.zero;
     public float speed = 10.0F;
     public float speedfalloff = 10.0F;
     public float MaxSpeed = 3.0F;
 
-
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 	
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Player")
+        {
+            Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), coll.collider);
+        }
+    }
+
+    void Update ()
+    {
         var HorizontalInput = Input.GetAxis("Horizontal");
 
         if (Mathf.Abs(HorizontalInput)<0.03f)
@@ -25,9 +32,9 @@ public class Player : NetworkBehaviour
             velocity -= velocity * Time.deltaTime * speedfalloff;
         }
 
-        if (velocity.magnitude >= MaxSpeed)
+        if (Mathf.Abs(velocity.x) >= MaxSpeed)
         {
-            velocity = velocity.normalized * MaxSpeed;
+            velocity.x = (velocity.x / Mathf.Abs(velocity.x)) * MaxSpeed;
         }
 
         if (Input.GetButton("Jump"))
