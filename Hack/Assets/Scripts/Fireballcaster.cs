@@ -25,7 +25,7 @@ public class Fireballcaster : NetworkBehaviour {
         //je bent casting als de timer boven de 0 zit
     Castingfireball = fireballtimer >= 0.0F;
 
-        if (Input.GetButton("Fire1") && Castingfireball == false)
+        if (isLocalPlayer && Input.GetButton("Fire1") && Castingfireball == false)
     {
             GameObject t_Fireball = Instantiate(fireballobject) as GameObject;
             t_Fireball.transform.position = transform.position + Vector3.up * 0.3F;
@@ -33,7 +33,7 @@ public class Fireballcaster : NetworkBehaviour {
     }
 
 
-
+       
     //go to where the player is facing
     //collision with objects
 
