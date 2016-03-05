@@ -20,7 +20,8 @@ public class Player : NetworkBehaviour
 
     void OnCollisionEnter2D(Collision2D a_Collision)
     {
-        if(a_Collision.collider.tag == "Player")
+        // Units van hetzelfde type colliden niet.
+        if(a_Collision.collider.tag == tag)
         {
             Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), a_Collision.collider);
         }
