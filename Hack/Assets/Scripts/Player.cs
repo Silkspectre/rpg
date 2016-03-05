@@ -9,16 +9,16 @@ public class Player : NetworkBehaviour
     public float speedfalloff = 10.0F;
     public float MaxSpeed = 3.0F;
 
-    void Start ()
-    {
+
+    // Use this for initialization
+    void Start () {
 	
 
 	}
-
-	void Update ()
-    {
+	
+	// Update is called once per frame
+	void Update () {
         var HorizontalInput = Input.GetAxis("Horizontal");
-        var VerticalInput = Input.GetAxis("Vertical");
 
         if (Mathf.Abs(HorizontalInput)<0.03f)
         {
@@ -30,8 +30,14 @@ public class Player : NetworkBehaviour
             velocity = velocity.normalized * MaxSpeed;
         }
 
-        velocity += new Vector3(HorizontalInput, 0, 0) * speed * Time.deltaTime;
+        if (Input.GetButton("Jump"))
+        {
+            velocity += Vector3.up;
+        }
 
+        //als laatste
+        velocity += new Vector3(HorizontalInput, 0, 0) * speed * Time.deltaTime;
         transform.position += velocity * Time.deltaTime;
+
     }
 }
