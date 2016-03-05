@@ -27,8 +27,9 @@ public class Fireballcaster : NetworkBehaviour {
 
         if (isLocalPlayer && Input.GetButton("Fire1") && Castingfireball == false)
     {
-            GameObject t_Fireball = Network.Instantiate(fireballobject, transform.position + Vector3.up * 0.3F, Quaternion.identity, 0) as GameObject;
+            GameObject t_Fireball = Instantiate(fireballobject, transform.position + Vector3.up * 0.3F, Quaternion.identity) as GameObject;
             fireballtimer = fireballdelay;
+            NetworkServer.Spawn(t_Fireball);
     }
 
 
