@@ -32,6 +32,8 @@ public class Fireballcaster : NetworkBehaviour {
             fireballtimer = fireballdelay;
     }
 
+
+
     //go to where the player is facing
     //collision with objects
 
